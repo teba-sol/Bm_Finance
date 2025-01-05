@@ -163,7 +163,7 @@ const AboutCompany: React.FC = () => {
                 boxShadow: "lg",
                 transform: "scale(1.05)",
               }}
-              onClick={() => (window.location.href = "/learn-more")}
+              onClick={() => (window.location.href = "/learn_more")}
             >
               Learn More
             </Button>

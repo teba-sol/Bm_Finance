@@ -7,6 +7,7 @@ import DashboardPage from "./components/DashboardPage";
 import Theland from "./components/Theland";
 import SignUp from "./components/SignUp";
 import TransactionPage from "./components/TransactionPage";
+import LearnMore from "./components/LearnMore";
 
 
 const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
@@ -30,6 +31,10 @@ const App = () => {
     {
       path: "/signup",
       element: <SignUp />, 
+    },
+    {
+      path: "/learn_more",
+      element: <LearnMore />, 
     },
     {
       path: "/login",
