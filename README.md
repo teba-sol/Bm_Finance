@@ -1,54 +1,153 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+           BM-Finance
+           
+BM-Finance is a finance management web application designed to help users track their financial transactions,
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+view their current balance, and analyze weekly expenses through an intuitive dashboard. 
 
-Currently, two official plugins are available:
+The app provides user authentication, a protected dashboard, and seamless transaction management with MongoDB as the backend database.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+    Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+BM-Finance/
+├── finance-backend/ 
+│   ├── index.js 
+│   ├── node_modules/ 
+│   ├── models/Transaction.js 
+│   ├── User_model/User.js 
+│   ├── package-lock.json 
+│   └── package.json
 
-- Configure the top-level `parserOptions` property like this:
+├── finance-frontend/
+│   ├── assets/svg/
+│   ├── components/
+│   ├── SingleComponent/
+│   └── imagess/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── context/
+│   ├── index.html
+│   ├── package-lock.json
+│   └── package.json
+└── README.md
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+    Features
+User Authentication:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-=======
-# Bm_Finance
->>>>>>> 3c5de6094d658d065bf260b2b3bc602b948a329a
+Sign-up and login functionality to ensure secure access.
+
+    Dashboard:
+
+Displays the user's current balance.
+
+Shows a list of the 5 most recent transactions.
+
+Allows users to add new transactions (income/expense).
+
+    Data Visualization:
+
+Responsive Design: Optimized for desktop, tablet, and mobile views.
+
+    Technologies Used
+
+Frontend
+
+ReactJS with Vite
+
+TypeScript
+
+Chakra UI for UI components
+
+Tailwind CSS for custom styling
+
+Backend
+
+Node.js with Express.js
+
+MongoDB for database management (MongoDB Atlas)
+
+    Database Structure
+
+Database Name: transactions
+
+    Collections:
+
+trans: Stores all transaction data.
+
+my_users: Stores user information for authentication and monitoring.
+
+    Connection Strings
+MongoDB Atlas:  "mongodb+srv://teba-mern:kALwuL0ntUKsXZQs@mycluster.w2t9z.mongodb.net/transactions?retryWrites=true&w=majority";
+
+MongoDB Atlas Cluster: myCluster
+
+How to Run the Project
+
+    Prerequisites
+
+Node.js and npm installed
+
+MongoDB running online or an Atlas cluster connection
+
+Vite installed globally (optional)
+
+Steps
+
+    Clone the repository:
+
+git clone:  https://github.com/teba-sol/Bm_Finance/
+
+cd BM-Finance
+
+Install dependencies for both frontend and backend:
+
+
+    # Install backend dependencies
+cd backend
+
+npm install
+
+    # Install frontend dependencies
+    
+cd ../frontend
+
+npm install
+
+cd backend
+
+npm run dev
+
+Start the frontend development server:
+
+cd frontend
+
+npm run dev
+
+
+     Why npm run dev?
+
+For both the frontend and backend, npm run dev is used because:
+
+Frontend: Running npm run dev starts the Vite development server, which provides fast Hot Module Replacement (HMR) for a better development experience.
+
+The frontend is served on http://localhost:5173 by default.
+
+Backend: npm run dev ensures that the backend server restarts automatically whenever changes are made to the code (using tools like nodemon). 
+
+This improves the development workflow by eliminating the need to restart the server manually after every update.
+
+
+Open your browser and navigate to http://localhost:3000.
+
+Future Improvements
+
+Add user-specific transaction filtering.
+
+Include category-wise breakdowns of expenses.
+
+Add notifications for significant expense trends.
+
+
+
