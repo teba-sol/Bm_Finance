@@ -10,6 +10,7 @@ The app provides user authentication, a protected dashboard, and seamless transa
     Project Structure
 
 BM-Finance/
+
 ├── finance-backend/ 
 │   ├── index.js 
 │   ├── node_modules/ 
@@ -17,6 +18,8 @@ BM-Finance/
 │   ├── User_model/User.js 
 │   ├── package-lock.json 
 │   └── package.json
+
+BM-Finance/
 
 ├── finance-frontend/
 │   ├── assets/svg/
